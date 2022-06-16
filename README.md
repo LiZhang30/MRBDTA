@@ -21,7 +21,25 @@ A  deep learning model for predicting drug-target binding affinity
 
 	Note: the environment.yml file should be downloaded and put into the default path of Anaconda Prompt.
 
-3 Instructions to run Model.py:
+3 Instructions to run on a small real dataset(Demo)
+	
+	Based on a small dataset from kiba dataset:
+		First, put folder data_kiba, DataHelper.py, emetrics.py and Demo.py into the same folder.
+		Second, use PyCharm to open Model.py and set the python interpreter of PyCharm.
+		Third, modify codes in Model.py to set the path for loading data and the path for saving the trained model. The details are as follows:
+			line 249 in Model.py
+			line 268 in Model.py
+		Fourth, open Anaconda Prompt and enter the following command:
+			activate env_name
+		Fifth, run Model.py in PyCharm.
+
+		Expected output：
+			The kiba scores between drugs and targets in test set of the small dataset would be output as a csv file.
+		
+		Expected run time on a "normal" desktop computer:
+			The run time in our coumputer (CPU:Xeon 3106, GPU NVIDIA Geforce RTX 2080 Ti, ARM 64G) is about 5 minutes.
+
+4 Instructions for use(two benchmark datasets are included in our data):
 
 	Based on kiba dataset:
 		First, put folder data_kiba, DataHelper.py, emetrics.py and Model.py into the same folder.
