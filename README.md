@@ -32,7 +32,7 @@ A  deep learning model for predicting drug-target binding affinity
 			line 268 in Demo.py
 		Fourth, open Anaconda Prompt and enter the following command:
 			activate env_name
-		Fifth, run MDemo.py in PyCharm.
+		Fifth, run Demo.py in PyCharm.
 
 		Expected output：
 			The kiba scores between drugs and targets in test set of the small dataset would be output as a csv file.
