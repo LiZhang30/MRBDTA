@@ -26,13 +26,13 @@ A  deep learning model for predicting drug-target binding affinity
 	
 	Based on a small dataset from kiba dataset:
 		First, put folder data_kiba, DataHelper.py, emetrics.py and Demo.py into the same folder.
-		Second, use PyCharm to open Model.py and set the python interpreter of PyCharm.
-		Third, modify codes in Model.py to set the path for loading data and the path for saving the trained model. The details are as follows:
-			line 249 in Model.py
-			line 268 in Model.py
+		Second, use PyCharm to open Demo.py and set the python interpreter of PyCharm.
+		Third, modify codes in Demo.py to set the path for loading data and the path for saving the trained model. The details are as follows:
+			line 249 in Demo.py
+			line 268 in Demo.py
 		Fourth, open Anaconda Prompt and enter the following command:
 			activate env_name
-		Fifth, run Model.py in PyCharm.
+		Fifth, run MDemo.py in PyCharm.
 
 		Expected output：
 			The kiba scores between drugs and targets in test set of the small dataset would be output as a csv file.
