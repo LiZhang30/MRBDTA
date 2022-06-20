@@ -39,6 +39,9 @@ A  deep learning model for predicting drug-target binding affinity
 		
 		Expected run time on a "normal" desktop computer:
 			The run time in our coumputer (CPU:Xeon 3106, GPU NVIDIA Geforce RTX 2080 Ti, ARM 64G) is about 5 minutes.
+		
+		Note: in the csv file, drug SMILES, protein sequences and binding affinity values are displayed in column 1, column 2 and column 3, respectively. 
+
 
 4 Instructions for use(two benchmark datasets are included in our data):
 
@@ -57,6 +60,9 @@ A  deep learning model for predicting drug-target binding affinity
 
 		Expected run time on a "normal" desktop computer:
 			The run time in our coumputer (CPU:Xeon 3106, GPU NVIDIA Geforce RTX 2080 Ti, ARM 64G) is about 24 hours.
+		
+		Note: in the csv file, drug SMILES, protein sequences and binding affinity values are displayed in column 1, column 2 and column 3, respectively. 
+
 	
 	Based on davis dataset:
 		First, put folder data_davis, DataHelper.py, emetrics.py and Model.py into the same folder.
@@ -77,3 +83,6 @@ A  deep learning model for predicting drug-target binding affinity
 
 		Expected run time on a "normal" desktop computer:
 			The run time in our coumputer (CPU:Xeon 3106, GPU NVIDIA Geforce RTX 2080 Ti, ARM 64G) is about 6 hours.
+		
+		Note: in the csv file, drug SMILES, protein sequences and binding affinity values are displayed in column 1, column 2 and column 3, respectively. 
+
