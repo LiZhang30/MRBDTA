@@ -22,7 +22,7 @@ A  deep learning model for predicting drug-target binding affinity
 
 	Note: the environment.yml file should be downloaded and put into the default path of Anaconda Prompt.
 
-3 Instructions to run on a small real dataset(Demo)
+3 Instructions to run on a small real dataset(Demo)：
 	
 	Based on a small dataset from kiba dataset:
 		First, put folder data_kiba, DataHelper.py, emetrics.py and Demo.py into the same folder.
