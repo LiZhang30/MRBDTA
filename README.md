@@ -1,6 +1,3 @@
-# MRBDTA
-A  deep learning model for predicting drug-target binding affinity
-
 1 System requirements:
 
 	Hardware requirements: 
@@ -22,8 +19,8 @@ A  deep learning model for predicting drug-target binding affinity
 
 	Note: the environment.yml file should be downloaded and put into the default path of Anaconda Prompt.
 
-3 Instructions to run on a small real dataset(Demo)：
-	
+3 Instructions to run on a small real dataset(Demo)
+
 	Based on a small dataset from kiba dataset:
 		First, put folder data_kiba, DataHelper.py, emetrics.py and Demo.py into the same folder.
 		Second, use PyCharm to open Demo.py and set the python interpreter of PyCharm.
@@ -39,50 +36,44 @@ A  deep learning model for predicting drug-target binding affinity
 		
 		Expected run time on a "normal" desktop computer:
 			The run time in our coumputer (CPU:Xeon 3106, GPU NVIDIA Geforce RTX 2080 Ti, ARM 64G) is about 5 minutes.
-		
-		Note: in the csv file, drug SMILES, protein sequences and binding affinity values are displayed in column 1, column 2 and column 3, respectively. 
 
+		Note: in the csv file, drug SMILES, protein sequences and binding affinity values are displayed in column 1, column 2 and column 3, respectively. 
 
 4 Instructions for use(two benchmark datasets are included in our data):
 
 	Based on kiba dataset:
-		First, put folder data_kiba, DataHelper.py, emetrics.py and Model.py into the same folder.
-		Second, use PyCharm to open Model.py and set the python interpreter of PyCharm.
-		Third, modify codes in Model.py to set the path for loading data and the path for saving the trained model. The details are as follows:
-			line 249 in Model.py
-			line 268 in Model.py
+		First, put folder data_kiba, DataHelper.py, emetrics.py and MRBDTA.py into the same folder.
+		Second, use PyCharm to open MRBDTA.py and set the python interpreter of PyCharm.
+		Third, modify codes in MRBDTA.py to set the path for loading data and the path for saving the trained model. The details are as follows:
+			line 287 in MRBDTA.py
+			line 384-388 in MRBDTA.py
 		Fourth, open Anaconda Prompt and enter the following command:
 			activate env_name
-		Fifth, run Model.py in PyCharm.
+		Fifth, run MRBDTA.py in PyCharm.
 
 		Expected output：
-			The kiba scores between drugs and targets in test set of kiba dataset would be output as a csv file.
+			Results (MSE, CI, RM2) predicted by MRBDTA on test set of KIBA dataset for 5 times would be output as three csv files, respectively.
 
 		Expected run time on a "normal" desktop computer:
-			The run time in our coumputer (CPU:Xeon 3106, GPU NVIDIA Geforce RTX 2080 Ti, ARM 64G) is about 24 hours.
-		
-		Note: in the csv file, drug SMILES, protein sequences and binding affinity values are displayed in column 1, column 2 and column 3, respectively. 
+			The run time in our coumputer (CPU:Xeon 3106, GPU NVIDIA Geforce RTX 2080 Ti, ARM 64G) is about 168 hours (seven days).
 
-	
 	Based on davis dataset:
-		First, put folder data_davis, DataHelper.py, emetrics.py and Model.py into the same folder.
-		Second, use PyCharm to open Model.py and set the python interpreter of PyCharm.
-		Third, modify codes in Model.py to set parameters for the davis dataset. The details are as follows:
-			line 241 to line 248 in Model.py: 'max length for drugs, max length for proteins, trian set, test set'.
-			line 253 in Model.py: 'drug, target, affinity = DH.LoadData(fpath_kiba, logspance_trans=False)' -> 'drug, target, affinity = DH.LoadData(fpath_davis, logspance_trans=True)'.
-			line 265 in Model.py: 'EPOCHS, batch_size, accumulation_steps = 600, 32, 32' -> 'EPOCHS, batch_size, accumulation_steps = 300, 32, 8'.
-		Fourth, modify codes in Model.py to set the path for loading data and the path for saving the trained model. The details are as follows:
-			line 244 in Model.py
-			line 268 in Model.py
+		First, put folder data_davis, DataHelper.py, emetrics.py and MRBDTA.py into the same folder.
+		Second, use PyCharm to open MRBDTA.py and set the python interpreter of PyCharm.
+		Third, modify codes in MRBDTA.py to set parameters for the davis dataset. The details are as follows:
+			line 279-286 in MRBDTA.py: 'max length for drugs, max length for proteins, trian set, test set'.
+			line 291 in MRBDTA.py: 'drug, target, affinity = DH.LoadData(fpath_kiba, logspance_trans=False)' -> 'drug, target, affinity = DH.LoadData(fpath_davis, logspance_trans=True)'.
+			line 398 in MRBDTA.py: 'EPOCHS, batch_size, accumulation_steps = 600, 32, 32' -> 'EPOCHS, batch_size, accumulation_steps = 300, 32, 8'.
+			line 300-346 in MRBDTA.py
+		Fourth, modify codes in MRBDTA.py to set the path for loading data and the path for saving the trained model. The details are as follows:
+			line 282 in MRBDTA.py
+			line 384-388 in MRBDTA.py
 		Fifth, open Anaconda Prompt and enter the following command:
 			activate env_name
-		Sixth, run Model.py in PyCharm.
+		Sixth, run MRBDTA.py in PyCharm.
 
 		Expected output：
-			The Kd in nM between drugs and targets in test set of davis dataset would be output as a csv file.
+			Results (MSE, CI, RM2) predicted by MRBDTA on test set of davis dataset for 5 times would be output as three csv files, respectively.
 
 		Expected run time on a "normal" desktop computer:
-			The run time in our coumputer (CPU:Xeon 3106, GPU NVIDIA Geforce RTX 2080 Ti, ARM 64G) is about 6 hours.
-		
-		Note: in the csv file, drug SMILES, protein sequences and binding affinity values are displayed in column 1, column 2 and column 3, respectively. 
-
+			The run time in our coumputer (CPU:Xeon 3106, GPU NVIDIA Geforce RTX 2080 Ti, ARM 64G) is about 96 hours (four days).
